@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1536845375 source:c:\users\alumno\desktop\clase7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1536845375 
+
+1536893859 source:/home/nati/Descargas/repositorio test/Clase7/main.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Info1.h"
+
+1536893817 source:/home/nati/Descargas/repositorio test/Clase7/Info1.c
+	<stdio_ext.h>
+	"Info1.h"
+
+1536893790 /home/nati/Descargas/repositorio test/Clase7/Info1.h
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1536847505 source:c:\users\alumno\desktop\funciones\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1536847834 source:c:\users\alumno\desktop\funciones\valid.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	"Valid.h"
+
+1536847820 c:\users\alumno\desktop\funciones\valid.h
+

@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1536936696 source:c:\users\alumno\desktop\clase8\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Alumno.h"
+
+1536937757 source:c:\users\alumno\desktop\clase8\alumno.c
+	<stdio.h>
+	"Alumno.h"
+
+1536937484 c:\users\alumno\desktop\clase8\alumno.h
+
+1537456827 source:c:\users\alumno\desktop\test-master\test-master\clase8\alumno.c
+	<stdio.h>
+	"Alumno.h"
+
+1537456827 c:\users\alumno\desktop\test-master\test-master\clase8\alumno.h
+
+1537456938 source:c:\users\alumno\desktop\test-master\test-master\clase8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumno.h"
+
