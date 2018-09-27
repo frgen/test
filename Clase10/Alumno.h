@@ -7,7 +7,7 @@ typedef struct
     int dia;
     int mes;
     int anio;
-}eFecha;
+} eFecha;
 
 typedef struct
 {
@@ -19,7 +19,7 @@ typedef struct
     int estado;
     //eFecha fechaNacimiento;
     //eFecha fechaIngreso;
-}eAlumno;
+} eAlumno;
 
 void mostrarAlumno(eAlumno);
 

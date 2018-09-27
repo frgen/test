@@ -17,12 +17,12 @@ int main()
 
     eCurso misCursos[3];
 
-    //inicializarCursos(misCursos);
+    inicializarCursos(misCursos);
 
-    //mostrarTodosLosCursos(misCursos);
+    mostrarTodosLosCursos(misCursos, 3);
 
-    //inicializarAlumno(listaAlumnos, A, VACIO);
-    //inicializarAlumnosConDatos(listaAlumnos, A, VACIO);
+    inicializarAlumno(listaAlumnos, A, VACIO);
+    inicializarAlumnosConDatos(listaAlumnos, A);
 
     do
     {
@@ -61,8 +61,8 @@ int main()
                 if(listaAlumnos[i].estado==OCUPADO)
                 {
                     printf("%d--%s--%f--\n", listaAlumnos[i].legajo,
-                                             listaAlumnos[i].nombre,
-                                             listaAlumnos[i].promedio);
+                           listaAlumnos[i].nombre,
+                           listaAlumnos[i].promedio);
                     for(j=0; j<3; j++)
                     {
                         if(listaAlumnos[i].idCurso==misCursos[j].id)

@@ -18,3 +18,22 @@
 
 1538059554 c:\users\alumno\desktop\clase10\curso.h
 
+1538084977 source:e:\clase10\alumno.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumno.h"
+
+1538080010 e:\clase10\alumno.h
+
+1538080010 source:e:\clase10\curso.c
+	"curso.h"
+
+1538080093 e:\clase10\curso.h
+
+1538084551 source:e:\clase10\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Alumno.h"
+	"curso.h"
+

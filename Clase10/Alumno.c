@@ -5,11 +5,11 @@
 
 void inicializarAlumnosConDatos(eAlumno listado[], int tam)
 {
-    int legajo[5]={1,2,3,4,5};
-    char nombre[5][50]={"Juan","Maria","Pedro", "Susana", "Luis"};
-    float promedio[5]={3,4,5,6,8};
-    char direccion[5][20]={"aaa", "bbb", "ccc", "ddd", "eee"};
-    int curso[5]={100,102,101,102,100};
+    int legajo[5]= {1,2,3,4,5};
+    char nombre[5][50]= {"Juan","Maria","Pedro", "Susana", "Luis"};
+    float promedio[5]= {3,4,5,6,8};
+    char direccion[5][20]= {"aaa", "bbb", "ccc", "ddd", "eee"};
+    int curso[5]= {100,102,101,102,100};
 
     int i;
 
@@ -47,23 +47,7 @@ int borrarAlumno(eAlumno listado[], int tam)
 
 eAlumno cargarAlumno()
 {
-    eAlumno miAlumno;
-
-    printf("Ingrese el legajo: ");
-    scanf("%d", &miAlumno.legajo);
-
-    printf("Ingrese el nombre: ");
-    fflush(stdin);
-    gets(miAlumno.nombre);
-
-    printf("Ingrese el promedio: ");
-    scanf("%f", &miAlumno.promedio);
-
-    printf("Ingrese el direccion: ");
-    fflush(stdin);
-    gets(miAlumno.direccion);
-
-    return miAlumno;
+    return;
 }
 
 void mostrarAlumno(eAlumno alumnoParametro)
@@ -96,6 +80,25 @@ void mostrarListado(eAlumno listado[], int tam)
     return;
 }
 
+void inicializarAlumno(eAlumno listado[], int tam, int estado)
+{
+    eAlumno miAlumno;
 
+    printf("Ingrese el legajo: ");
+    scanf("%d", &miAlumno.legajo);
+
+    printf("Ingrese el nombre: ");
+    fflush(stdin);
+    gets(miAlumno.nombre);
+
+    printf("Ingrese el promedio: ");
+    scanf("%f", &miAlumno.promedio);
+
+    printf("Ingrese el direccion: ");
+    fflush(stdin);
+    gets(miAlumno.direccion);
+
+    return miAlumno;
+}
 
 

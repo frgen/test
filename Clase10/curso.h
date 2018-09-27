@@ -4,6 +4,10 @@ typedef struct
     char nombre[30];
     int duracion;
     char profesor[20];
-}eCurso;
+} eCurso;
 
 void inicializarCursos(eCurso*);
+
+void mostrarCurso(eCurso);
+
+void mostrarTodosLosCursos(eCurso* , int);

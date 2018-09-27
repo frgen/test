@@ -2,10 +2,10 @@
 
 void inicializarCursos(eCurso* cursos)
 {
-    int id[3]={100,101,102};
-    char nombre[3][30]={"PHP", "C#", "VB"};
-    int duracion[3]={3, 5, 6};
-    char profesor[3][20]={"Christian", "Octavio", "Maxi"};
+    int id[3]= {100,101,102};
+    char nombre[3][30]= {"PHP", "C#", "VB"};
+    int duracion[3]= {3, 5, 6};
+    char profesor[3][20]= {"Christian", "Octavio", "Maxi"};
     int i;
     for(i=0; i<3; i++)
     {
