@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1539267794 source:c:\users\alumno\desktop\primerparcial\arrayowners.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayOwners.h"
+
+1539265559 c:\users\alumno\desktop\primerparcial\arrayowners.h
+
+1539259865 source:c:\users\alumno\desktop\primerparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1539259865 c:\users\alumno\desktop\primerparcial\menu.h
+	"arrayOwners.h"
+
+1539266003 source:c:\users\alumno\desktop\primerparcial\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1539266992 source:c:\users\alumno\desktop\primerparcial\validate.c
+
