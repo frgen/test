@@ -26,6 +26,7 @@ void showMenu(eOwner* owners, int length)
         case '2':
             if(flag==1)
             {
+                printOwners(owners, length);
                 editOwner(owners, length);
             }
             else
@@ -36,6 +37,7 @@ void showMenu(eOwner* owners, int length)
         case '3':
             if(flag==1)
             {
+                printOwners(owners, length);
                 removeOwner(owners, length);
             }
             else

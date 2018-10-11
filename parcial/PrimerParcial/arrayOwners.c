@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "arrayOwners.h"
+#include "validate.h"
 
 int initOwners(eOwner* owners, int len)
 {
@@ -17,16 +18,16 @@ int initOwners(eOwner* owners, int len)
 
 int initOwnersHardCode(eOwner* owners, int len)
 {
-    int id[10]= {100,101,102,103,104,105,106,107,108,109};
-    char name[10][51]= {"Walter","Maria","Andres","Belen","Jose","Susana","Pablo","Ursula","Pedro","Lucia"};
-    char lastName[10][51]= {"Ramirez","Perez","Gomez","Soto","Oliva","Lopez","Alvarez","Barrios","Torres","Pereira"};
-    char address[10][51]= {"aaa","bbb","ccc","ddd","eee","fff","ggg","hhh","iii","jjj"};
-    char cardNumber[10][51]= {"1000111122223333","1000111122223345","1000111122223369",
-    "1000111122223333","1000111122223345","1000111122223369","1000111122223333",
-    "1000111122223345","1000111122223369","1000111122223345"};
+    int id[5]= {100,101,102,103,104};
+    char name[5][51]= {"Walter","Maria","Andres","Belen","Jose"};
+    char lastName[5][51]= {"Ramirez","Perez","Gomez","Soto","Oliva"};
+    char address[5][51]= {"aaa","bbb","ccc","ddd","eee"};
+    char cardNumber[5][51]= {"1000111122223333","1000111122223345","1000111122223369",
+                             "1000111122223333","1000111122223345"
+                            };
 
     int i;
-    for(i=0; i<10; i++)
+    for(i=0; i<5; i++)
     {
         owners[i].idOwner=id[i];
         strcpy(owners[i].name, name[i]);
@@ -40,20 +41,40 @@ int initOwnersHardCode(eOwner* owners, int len)
 
 int addOwner(eOwner* owners, int len)
 {
-    int i;
+    int i, j;
     for(i=0; i<len; i++)
     {
         if(owners[i].state != FULL)
         {
             owners[i].idOwner = rand() % 10 + 200;
             printf("Ingrese el nombre: ");
+            fflush(stdin);
             scanf("%s", owners[i].name);
+            j = isWord(owners[i].name);
+            if(j==-1)
+            {
+                printf("Error: El nombre ingresado no es valido\n");
+                break;
+            }
             printf("Ingrese el apellido: ");
+            fflush(stdin);
             scanf("%s", owners[i].lastName);
+            j = isWord(owners[i].lastName);
+            if(j==-1)
+            {
+                printf("Error: El apellido ingresado no es valido\n");
+                break;
+            }
             printf("Ingrese la direccion: ");
+            fflush(stdin);
             scanf("%s", owners[i].address);
             printf("Ingrese el numero de tarjeta de credito: ");
-            scanf("%s", owners[i].cardNumber);
+            j = getNumber(owners[i].cardNumber);
+            if(j==0)
+            {
+                printf("Error: el numero de tarjeta ingresado no es valido\n");
+                break;
+            }
             owners[i].state = FULL;
             break;
         }
@@ -121,7 +142,7 @@ int removeOwner(eOwner* owners, int len)
 int editOwner(eOwner* owners, int len)
 {
     int id;
-    int i;
+    int i, j;
     char option;
 
     id = findOwnerById(owners,len,owners[len].idOwner);
@@ -130,7 +151,7 @@ int editOwner(eOwner* owners, int len)
     {
         if(owners[i].idOwner==id)
         {
-            printf("Esta seguro de modificar(s/n)?\n");
+            printf("Desea modificar el numero de tarjeta de credito(s/n)?\n");
             fflush(stdin);
             scanf("%c", &option);
             option = toupper(option);
@@ -138,8 +159,12 @@ int editOwner(eOwner* owners, int len)
             if(option=='S')
             {
                 printf("Ingrese nuevo numero de tarjeta: ");
-                scanf("%s", owners[i].cardNumber);
-                printf("Modificado con exito\n");
+                j = getNumber(owners[i].cardNumber);
+                if(j==0)
+                {
+                    printf("Error: el numero de tarjeta ingresado no es valido\n");
+                    break;
+                }
             }
             break;
         }

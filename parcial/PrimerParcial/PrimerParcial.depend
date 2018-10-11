@@ -23,3 +23,34 @@
 
 1539266992 source:c:\users\alumno\desktop\primerparcial\validate.c
 
+1539270143 source:e:\parcial\primerparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1539270143 e:\parcial\primerparcial\menu.h
+	"arrayOwners.h"
+
+1539288110 e:\parcial\primerparcial\arrayowners.h
+
+1539280763 source:e:\parcial\primerparcial\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1539296942 source:e:\parcial\primerparcial\validate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validate.h"
+
+1539298172 source:e:\parcial\primerparcial\arrayowners.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayOwners.h"
+	"validate.h"
+
+1539296512 e:\parcial\primerparcial\validate.h
+
