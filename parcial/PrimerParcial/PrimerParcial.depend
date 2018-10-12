@@ -27,22 +27,22 @@
 
 1539266992 source:c:\users\alumno\desktop\primerparcial\validate.c
 
-1539270143 source:e:\parcial\primerparcial\main.c
+1539315038 source:e:\parcial\primerparcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 
-1539270143 e:\parcial\primerparcial\menu.h
-	"arrayOwners.h"
+1539313636 e:\parcial\primerparcial\menu.h
+	"arrayOwnersAndCars.h"
 
-1539288110 e:\parcial\primerparcial\arrayowners.h
+1539313636 e:\parcial\primerparcial\arrayowners.h
 
-1539280763 source:e:\parcial\primerparcial\menu.c
+1539320596 source:e:\parcial\primerparcial\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 
-1539296942 source:e:\parcial\primerparcial\validate.c
+1539315037 source:e:\parcial\primerparcial\validate.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -50,7 +50,7 @@
 
 1539298172 h"
 
-1539298172 source:e:\parcial\primerparcial\arrayowners.c
+1539315038 source:e:\parcial\primerparcial\arrayowners.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -58,7 +58,7 @@
 	"arrayOwners.h"
 	"validate.h"
 
-1539296512 e:\parcial\primerparcial\validate.h
+1539313636 e:\parcial\primerparcial\validate.h
 
 1539312345 source:/home/nati/Descargas/parcial/PrimerParcial/main.c
 	<stdio.h>
@@ -107,5 +107,23 @@
 
 1539313234 /home/nati/Descargas/parcial/PrimerParcial/arrayOwnersAndCars.h
 	"arrayOwners.h"
+	"arrayCars.h"
+
+1539322824 source:e:\parcial\primerparcial\arrayownersandcars.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<time.h>
+	"arrayOwnersAndCars.h"
+
+1539321571 e:\parcial\primerparcial\arrayownersandcars.h
+	"arrayOwners.h"
+	"arrayCars.h"
+
+1539322490 e:\parcial\primerparcial\arraycars.h
+
+1539318730 source:e:\parcial\primerparcial\arraycars.c
+	<stdio.h>
+	<stdlib.h>
 	"arrayCars.h"
 

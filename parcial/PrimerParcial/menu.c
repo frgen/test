@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <stdlib.h>
 #include "menu.h"
 
@@ -19,8 +19,8 @@ void showMenu(eOwner* owners, int length)
         printf("3.Baja de propietario\n4.Listar propietarios\n");
         printf("5.Ingreso de autos\n6.Egreso de autos\n7.Salir\n");
         printf("Elija una opcion: ");
-        //fflush(stdin);
-        __fpurge(stdin);
+        fflush(stdin);
+        //__fpurge(stdin);
         scanf("%c", &option);
 
         switch(option)
@@ -64,6 +64,7 @@ void showMenu(eOwner* owners, int length)
         case '5':
             if(flag==1)
             {
+                printOwners(owners, length);
                 addIdCar(cars, owners, length);
             }
             else
@@ -74,7 +75,7 @@ void showMenu(eOwner* owners, int length)
         case '6':
             if(flag==1)
             {
-                printf("Egreso de autos\n");
+                printOwnersAndCars(cars, owners, length);
             }
             else
             {
@@ -87,10 +88,10 @@ void showMenu(eOwner* owners, int length)
         default:
             printf("Opcion incorrecta\n");
         }
-        //system("pause");
-        //system("cls");
-        system("sleep 3s");
-        system("clear");
+        system("pause");
+        system("cls");
+        //system("sleep 3s");
+        //system("clear");
     }
     while(option!='7');
 }

@@ -11,7 +11,8 @@
 typedef struct
 {
     char patent[20];
-    char brand[30];
+    int brand;
+    int valor;
     int idForOwner;
     int state;
 } eCar;

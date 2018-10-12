@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
@@ -49,8 +49,8 @@ int addOwner(eOwner* owners, int len)
         {
             owners[i].idOwner = rand() % 10 + 200;
             printf("Ingrese el nombre: ");
-            //fflush(stdin);
-            __fpurge(stdin);
+            fflush(stdin);
+            //__fpurge(stdin);
             scanf("%s", owners[i].name);
             j = isWord(owners[i].name);
             if(j==-1)
@@ -59,8 +59,8 @@ int addOwner(eOwner* owners, int len)
                 break;
             }
             printf("Ingrese el apellido: ");
-            //fflush(stdin);
-            __fpurge(stdin);
+            fflush(stdin);
+            //__fpurge(stdin);
             scanf("%s", owners[i].lastName);
             j = isWord(owners[i].lastName);
             if(j==-1)
@@ -69,8 +69,8 @@ int addOwner(eOwner* owners, int len)
                 break;
             }
             printf("Ingrese la direccion: ");
-            //fflush(stdin);
-            __fpurge(stdin);
+            fflush(stdin);
+            //__fpurge(stdin);
             scanf("%s", owners[i].address);
             printf("Ingrese el numero de tarjeta de credito: ");
             j = getNumber(owners[i].cardNumber);
@@ -127,8 +127,8 @@ int removeOwner(eOwner* owners, int len)
         if(owners[i].idOwner==id)
         {
             printf("Esta seguro de borrar(s/n)?(No se puede deshacer)\n");
-            //fflush(stdin);
-            __fpurge(stdin);
+            fflush(stdin);
+            //__fpurge(stdin);
             scanf("%c", &option);
             option = toupper(option);
 
@@ -158,8 +158,8 @@ int editOwner(eOwner* owners, int len)
         if(owners[i].idOwner==id)
         {
             printf("Desea modificar el numero de tarjeta de credito(s/n)?\n");
-            //fflush(stdin);
-            __fpurge(stdin);
+            fflush(stdin);
+            //__fpurge(stdin);
             scanf("%c", &option);
             option = toupper(option);
 
