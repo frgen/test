@@ -31,10 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="arrayCars.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arrayCars.h" />
 		<Unit filename="arrayOwners.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="arrayOwners.h" />
+		<Unit filename="arrayOwnersAndCars.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arrayOwnersAndCars.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

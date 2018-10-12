@@ -6,12 +6,16 @@
 	<string.h>
 	"arrayOwners.h"
 
+1539270143 rs.h"
+
 1539265559 c:\users\alumno\desktop\primerparcial\arrayowners.h
 
 1539259865 source:c:\users\alumno\desktop\primerparcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
+
+1539280763 
 
 1539259865 c:\users\alumno\desktop\primerparcial\menu.h
 	"arrayOwners.h"
@@ -44,6 +48,8 @@
 	<string.h>
 	"validate.h"
 
+1539298172 h"
+
 1539298172 source:e:\parcial\primerparcial\arrayowners.c
 	<stdio.h>
 	<stdlib.h>
@@ -53,4 +59,53 @@
 	"validate.h"
 
 1539296512 e:\parcial\primerparcial\validate.h
+
+1539312345 source:/home/nati/Descargas/parcial/PrimerParcial/main.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	"menu.h"
+
+1539311770 /home/nati/Descargas/parcial/PrimerParcial/menu.h
+	"arrayOwnersAndCars.h"
+
+1539298239 /home/nati/Descargas/parcial/PrimerParcial/arrayOwners.h
+
+1539300052 source:/home/nati/Descargas/parcial/PrimerParcial/validate.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"validate.h"
+
+1539298239 /home/nati/Descargas/parcial/PrimerParcial/validate.h
+
+1539302243 source:/home/nati/Descargas/parcial/PrimerParcial/arrayOwners.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayOwners.h"
+	"validate.h"
+
+1539313182 source:/home/nati/Descargas/parcial/PrimerParcial/menu.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	"menu.h"
+
+1539312872 source:/home/nati/Descargas/parcial/PrimerParcial/arrayCars.c
+	<stdio_ext.h>
+	"arrayCars.h"
+
+1539311750 /home/nati/Descargas/parcial/PrimerParcial/arrayCars.h
+
+1539313087 source:/home/nati/Descargas/parcial/PrimerParcial/arrayOwnersAndCars.c
+	<stdio.h>
+	"arrayOwnersAndCars.h"
+
+1539313234 /home/nati/Descargas/parcial/PrimerParcial/arrayOwnersAndCars.h
+	"arrayOwners.h"
+	"arrayCars.h"
 
