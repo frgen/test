@@ -1,7 +1,27 @@
 #include <stdio.h>
 //#include <stdio_ext.h>
 #include <stdlib.h>
+#include <string.h>
 #include "arrayCars.h"
+
+int initCarsHardCode(eCar* cars, int len)
+{
+    int idCar[5]= {100,101,102,103,104};
+    char patent[5][20]= {"WBM123","MNB543","AAQ143","BZA987","JHG123"};
+    int brand[5]= {1,1,2,4,3};
+    int valor[5]= {500,490,289,345,695};
+
+    int i;
+    for(i=0; i<5; i++)
+    {
+        cars[i].idForOwner=idCar[i];
+        strcpy(cars[i].patent, patent[i]);
+        cars[i].brand=brand[i];
+        cars[i].valor=valor[i];
+        cars[i].state=FULL;
+    }
+    return 0;
+}
 
 int initCars(eCar* cars, int len)
 {

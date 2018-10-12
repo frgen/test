@@ -12,12 +12,15 @@ void showMenu(eOwner* owners, int length)
     int flag=0;
 
     initOwnersHardCode(owners, length);
+    initCarsHardCode(cars, length);
 
     do
     {
         printf("1.Alta de propietario\n2.Modificacion de propietario\n");
         printf("3.Baja de propietario\n4.Listar propietarios\n");
-        printf("5.Ingreso de autos\n6.Egreso de autos\n7.Salir\n");
+        printf("5.Ingreso de autos\n6.Egreso de autos\n");
+        printf("7.Listado autos estacionados\n8.Recaudacion estacionamiento\n");
+        printf("9.Recaudacion por marca\n0.Salir\n");
         printf("Elija una opcion: ");
         fflush(stdin);
         //__fpurge(stdin);
@@ -54,6 +57,7 @@ void showMenu(eOwner* owners, int length)
         case '4':
             if(flag==1)
             {
+                sortOwners(owners, length, 1);
                 printOwners(owners, length);
             }
             else
@@ -76,6 +80,7 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printOwnersAndCars(cars, owners, length);
+                getOutCar(cars, owners, length);
             }
             else
             {
@@ -83,6 +88,37 @@ void showMenu(eOwner* owners, int length)
             }
             break;
         case '7':
+            if(flag==1)
+            {
+                printOnlyCars(cars, owners, length);
+            }
+            else
+            {
+                printf("No se ingresaron datos\n");
+            }
+            break;
+        case '8':
+            if(flag==1)
+            {
+                printf("Recaudacion total\n");
+                totalCollection(cars, owners, length);
+            }
+            else
+            {
+                printf("No se ingresaron datos\n");
+            }
+            break;
+        case '9':
+            if(flag==1)
+            {
+                printf("Recaudacion por marca\n");
+            }
+            else
+            {
+                printf("No se ingresaron datos\n");
+            }
+            break;
+        case '0':
             printf("Saliendo...\n");
             break;
         default:
@@ -93,5 +129,5 @@ void showMenu(eOwner* owners, int length)
         //system("sleep 3s");
         //system("clear");
     }
-    while(option!='7');
+    while(option!='0');
 }

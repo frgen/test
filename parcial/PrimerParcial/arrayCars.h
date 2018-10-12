@@ -8,6 +8,7 @@
 #define AUDI 3
 #define OTRO 4
 
+
 typedef struct
 {
     char patent[20];
@@ -17,6 +18,10 @@ typedef struct
     int state;
 } eCar;
 
+int initCarsHardCode(eCar*, int);
+
 int initCars(eCar*, int);
 
 int addCar(eCar*, int);
+
+int dataCars(int);

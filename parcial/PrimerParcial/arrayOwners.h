@@ -68,3 +68,5 @@ int printOwners(eOwner*, int);
  *
  */
 int editOwner(eOwner*, int);
+
+int sortOwners(eOwner*, int, int);
