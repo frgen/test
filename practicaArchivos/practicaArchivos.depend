@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1541102806 source:/home/fede/Documentos/practicas/practicaArchivos/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1541113060 
+
+1541113060 source:e:\practicaarchivos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1541113060 source:/home/fede/wincarpet/practicaArchivos/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
