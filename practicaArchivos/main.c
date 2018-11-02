@@ -30,8 +30,9 @@ int main()
 
     for(i=0; i<5; i++)
     {
-        fprintf(pArchivo, "%s ", persona.nombres[i]);
-        fprintf(pArchivo, "%d\n", persona.edad[i]);
+    fwrite();
+        //fprintf(pArchivo, "%s ", persona.nombres[i]);
+        //fprintf(pArchivo, "%d\n", persona.edad[i]);
     }
 
     fclose(pArchivo);
