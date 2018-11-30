@@ -13,4 +13,8 @@ int totalCollection(eCar*, eOwner*, int);
 
 int collectionForBrand(eCar*, eOwner*, int);
 
+int sortOwnersAndCars(eCar*, eOwner*, int, int);
+
+int printmeById(eCar*, eOwner*, int)
+
 int devolverHorasEstadia();

@@ -1,15 +1,18 @@
 #include <stdio.h>
 //#include <stdio_ext.h>
 #include <stdlib.h>
+#include <string.h>
 #include "menu.h"
+#include "validate.h"
 
 
 
 void showMenu(eOwner* owners, int length)
 {
     eCar cars[length];
-    char option;
+    char aux[10];
     int flag=0;
+    int option;
 
     initOwnersHardCode(owners, length);
     initCarsHardCode(cars, length);
@@ -20,19 +23,32 @@ void showMenu(eOwner* owners, int length)
         printf("3.Baja de propietario\n4.Listar propietarios\n");
         printf("5.Ingreso de autos\n6.Egreso de autos\n");
         printf("7.Listado autos estacionados\n8.Recaudacion estacionamiento\n");
-        printf("9.Recaudacion por marca\n0.Salir\n");
+        printf("9.Recaudacion por marca\n");
+        printf("10.Listar propietario, patente y autos estacionados segun ID\n");
+        printf("11.Datos de propietarios de autos estacionados marca AUDI\n");
+        printf("12.Autos estacionados y datos de sus propietarios, ordenados por patente\n");
+        printf("0.Salir\n");
         printf("Elija una opcion: ");
         fflush(stdin);
         //__fpurge(stdin);
-        scanf("%c", &option);
+        option = getNumber(aux);
+
+        if(option==1)
+        {
+            option = atoi(aux);
+        }
+        else
+        {
+            option = -1;
+        }
 
         switch(option)
         {
-        case '1':
+        case 1:
             addOwner(owners, length);
             flag=1;
             break;
-        case '2':
+        case 2:
             if(flag==1)
             {
                 printOwners(owners, length);
@@ -43,7 +59,7 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '3':
+        case 3:
             if(flag==1)
             {
                 printOwners(owners, length);
@@ -54,10 +70,10 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '4':
+        case 4:
             if(flag==1)
             {
-                sortOwners(owners, length, 1);
+                sortOwnersAndCars(cars, owners, length, 1);
                 printOwners(owners, length);
             }
             else
@@ -65,7 +81,7 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '5':
+        case 5:
             if(flag==1)
             {
                 printOwners(owners, length);
@@ -76,7 +92,7 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '6':
+        case 6:
             if(flag==1)
             {
                 printOwnersAndCars(cars, owners, length);
@@ -87,7 +103,7 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '7':
+        case 7:
             if(flag==1)
             {
                 printOnlyCars(cars, owners, length);
@@ -97,7 +113,7 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '8':
+        case 8:
             if(flag==1)
             {
                 printf("Recaudacion total\n");
@@ -108,9 +124,10 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '9':
+        case 9:
             if(flag==1)
             {
+                collectionForBrand(cars, owners, length);
                 printf("Recaudacion por marca\n");
             }
             else
@@ -118,7 +135,37 @@ void showMenu(eOwner* owners, int length)
                 printf("No se ingresaron datos\n");
             }
             break;
-        case '0':
+        case 10:
+            if(flag==1)
+            {
+                printf("Propietarios y patentes segun ID\n");
+            }
+            else
+            {
+                printf("No se ingresaron datos\n");
+            }
+            break;
+        case 11:
+            if(flag==1)
+            {
+                printf("Propietarios de autos marca AUDI\n");
+            }
+            else
+            {
+                printf("No se ingresaron datos\n");
+            }
+            break;
+        case 12:
+            if(flag==1)
+            {
+                printf("Autos y propietarios (ordenados por patente)\n");
+            }
+            else
+            {
+                printf("No se ingresaron datos\n");
+            }
+            break;
+        case 0:
             printf("Saliendo...\n");
             break;
         default:
@@ -129,5 +176,5 @@ void showMenu(eOwner* owners, int length)
         //system("sleep 3s");
         //system("clear");
     }
-    while(option!='0');
+    while(option!=0);
 }
