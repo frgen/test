@@ -15,6 +15,8 @@ int collectionForBrand(eCar*, eOwner*, int);
 
 int sortOwnersAndCars(eCar*, eOwner*, int, int);
 
-int printmeById(eCar*, eOwner*, int)
+int printmeById(eCar*, eOwner*, int);
+
+int onlyAudiCars(eCar*, eOwner*, int);
 
 int devolverHorasEstadia();

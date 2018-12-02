@@ -1,4 +1,3 @@
-
 #define FULL 1
 #define EMPTY 0
 #define FIRED -1

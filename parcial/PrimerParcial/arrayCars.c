@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <stdio_ext.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include "arrayCars.h"
@@ -8,7 +8,7 @@ int initCarsHardCode(eCar* cars, int len)
 {
     int idCar[5]= {100,101,102,103,104};
     char patent[5][20]= {"WBM123","MNB543","AAQ143","BZA987","JHG123"};
-    int brand[5]= {1,4,2,1,3};
+    int brand[5]= {1,3,2,4,3};
     int valor[5]= {150,250,175,150,200};
 
     int i;
@@ -44,12 +44,12 @@ int addCar(eCar* cars, int len)
         if(cars[i].state != FULL)
         {
             printf("Ingrese la marca: ");
-            fflush(stdin);
-            //__fpurge(stdin);
+            //fflush(stdin);
+            __fpurge(stdin);
             scanf("%d", &cars[i].brand);
             printf("Ingrese la patente: ");
-            fflush(stdin);
-            //__fpurge(stdin);
+            //fflush(stdin);
+            __fpurge(stdin);
             scanf("%s", cars[i].patent);
 
             cars[i].state = FULL;

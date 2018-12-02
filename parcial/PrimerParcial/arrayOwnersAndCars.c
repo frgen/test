@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <stdio_ext.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -22,8 +22,8 @@ int addIdCar(eCar* cars, eOwner* owners, int len)
             if(cars[i].idForOwner==owners[i].idOwner)
             {
                 printf("Desea agregar un auto nuevo a este propietario(s/n)?\n");
-                fflush(stdin);
-                //__fpurge(stdin);
+                //fflush(stdin);
+                __fpurge(stdin);
                 scanf("%c", &option);
                 option = toupper(option);
 
@@ -85,8 +85,8 @@ int getOutCar(eCar* cars, eOwner* owners, int len)
             if(cars[i].idForOwner==owners[i].idOwner)
             {
                 printf("Desea egresar el auto del propietario(s/n)?\n");
-                fflush(stdin);
-                //__fpurge(stdin);
+                //fflush(stdin);
+                __fpurge(stdin);
                 scanf("%c", &option);
                 option = toupper(option);
 
@@ -136,10 +136,7 @@ int printOwnersAndCars(eCar* cars, eOwner* owners, int len)
             printf("%d\t%s\t%s\t%s\t%s\t\t%d\n", owners[i].idOwner, owners[i].name, owners[i].lastName,
                    cars[i].patent, textBrand, cars[i].valor);
         }
-        /*else if(cars[i].state==EMPTY)
-        {
 
-        }*/
     }
 
     return 0;
@@ -237,7 +234,7 @@ int sortOwnersAndCars(eCar* cars, eOwner* owners, int len, int order)
         {
             for(j=i+1; j<len; j++)
             {
-                if(owners[j].state==FULL && stricmp(owners[i].lastName, owners[j].lastName)>0)
+                if(owners[j].state==FULL && strcmp(owners[i].lastName, owners[j].lastName)>0)
                 {
                     strcpy(tempText, owners[i].lastName);
                     strcpy(owners[i].lastName, owners[j].lastName);
@@ -264,7 +261,7 @@ int sortOwnersAndCars(eCar* cars, eOwner* owners, int len, int order)
                     cars[j].brand=temp;
 
                 }
-                else if(owners[j].state==FULL && stricmp(owners[i].name, owners[j].name)>0)
+                else if(owners[j].state==FULL && strcmp(owners[i].name, owners[j].name)>0)
                 {
                     if(owners[i].lastName>owners[j].lastName)
                     {
@@ -283,7 +280,7 @@ int printmeById(eCar* cars, eOwner* owners, int len)
 {
     int id;
     int i;
-    char option;
+    char textBrand[20];
 
     id = findOwnerById(owners,len,owners[len].idOwner);
 
@@ -291,42 +288,53 @@ int printmeById(eCar* cars, eOwner* owners, int len)
     {
         for(i=0; i<len; i++)
         {
-            if(cars[i].idForOwner==id)
+            if(id==owners[i].idOwner)
             {
-
-                printf("Ingrese la marca (1.Alpha Romeo 2. Ferrari 3. Audi 4. Otro): ");
-                scanf("%d", &cars[i].brand);
-                switch(cars[i].brand)
+                if(cars[i].brand>0 &&cars[i].brand<=4)
                 {
-                case ALPHA_ROMEO:
-                    cars[i].valor=150;
-                    cars[i].state=FULL;
-                    printf("Agregado con exito\n");
-                    continue;
-                case FERRARI:
-                    cars[i].valor=175;
-                    cars[i].state=FULL;
-                    printf("Agregado con exito\n");
-                    continue;
-                case AUDI:
-                    cars[i].valor=200;
-                    cars[i].state=FULL;
-                    printf("Agregado con exito\n");
-                    continue;
-                case OTRO:
-                    cars[i].valor=250;
-                    cars[i].state=FULL;
-                    printf("Agregado con exito\n");
-                    continue;
+                    switch(cars[i].brand)
+                    {
+                    case ALPHA_ROMEO:
+                        strcpy(textBrand, "Alpha Romeo");
+                        break;
+                    case FERRARI:
+                        strcpy(textBrand, "Ferrari");
+                        break;
+                    case AUDI:
+                        strcpy(textBrand, "Audi");
+                        break;
+                    case OTRO:
+                        strcpy(textBrand, "Otro");
+                        break;
+                    }
                 }
+                printf("%s\n%s\n%s\n", owners[i].name, cars[i].patent, textBrand);
+                break;
             }
-            break;
+
         }
 
     }
+    return 0;
 }
 
-return 0;
+int onlyAudiCars(eCar* cars, eOwner* owners, int len)
+{
+    int i;
+
+    for(i=0; i<len; i++)
+    {
+        if(cars[i].state==FULL)
+        {
+            if(cars[i].brand==3)
+            {
+                printf("%d\t%s\t%s\t%s\n", owners[i].idOwner, owners[i].name, owners[i].lastName,
+                       owners[i].cardNumber);
+            }
+        }
+    }
+
+    return 0;
 }
 
 int devolverHorasEstadia()

@@ -15,7 +15,7 @@
 	<stdlib.h>
 	"menu.h"
 
-1539350715 
+1541128817 
 
 1539259865 c:\users\alumno\desktop\primerparcial\menu.h
 	"arrayOwners.h"
@@ -35,7 +35,7 @@
 1541128817 e:\parcial\primerparcial\menu.h
 	"arrayOwnersAndCars.h"
 
-1539323039 rsAndCars.h"
+1541128817 rsAndCars.h"
 
 1543505175 e:\parcial\primerparcial\arrayowners.h
 
@@ -46,13 +46,13 @@
 	"menu.h"
 	"validate.h"
 
+1541128817 h"
+
 1541128817 source:e:\parcial\primerparcial\validate.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"validate.h"
-
-1539323039 h"
 
 1543513029 source:e:\parcial\primerparcial\arrayowners.c
 	<stdio.h>
@@ -103,7 +103,7 @@
 	<stdio_ext.h>
 	"arrayCars.h"
 
-1539352019 .h"
+1541128817 .h"
 
 1539311750 /home/nati/Descargas/parcial/PrimerParcial/arrayCars.h
 
@@ -233,6 +233,65 @@
 
 1541128817 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/validate.c
 	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validate.h"
+
+1543713503 source:/home/nati/Descargas/test-master/parcial/PrimerParcial/arrayCars.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"arrayCars.h"
+
+1543713504 /home/nati/Descargas/test-master/parcial/PrimerParcial/arrayCars.h
+
+1543713503 source:/home/nati/Descargas/test-master/parcial/PrimerParcial/arrayOwners.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayOwners.h"
+	"validate.h"
+
+1543536235 /home/nati/Descargas/test-master/parcial/PrimerParcial/arrayOwners.h
+
+1543536235 /home/nati/Descargas/test-master/parcial/PrimerParcial/validate.h
+
+1543714711 source:/home/nati/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"arrayOwnersAndCars.h"
+
+1543714440 /home/nati/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.h
+	"arrayOwners.h"
+	"arrayCars.h"
+
+1543713503 source:/home/nati/Descargas/test-master/parcial/PrimerParcial/main.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	"menu.h"
+
+1543536235 /home/nati/Descargas/test-master/parcial/PrimerParcial/menu.h
+	"arrayOwnersAndCars.h"
+
+1543714496 source:/home/nati/Descargas/test-master/parcial/PrimerParcial/menu.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"validate.h"
+
+1543713503 source:/home/nati/Descargas/test-master/parcial/PrimerParcial/validate.c
+	<stdio.h>
+	<stdio_ext.h>
 	<stdlib.h>
 	<string.h>
 	"validate.h"
