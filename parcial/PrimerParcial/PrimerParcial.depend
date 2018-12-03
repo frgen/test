@@ -296,3 +296,62 @@
 	<string.h>
 	"validate.h"
 
+1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"arrayCars.h"
+
+1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.h
+
+1543861563 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayOwners.h"
+	"validate.h"
+
+1543861003 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.h
+
+1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/validate.h
+
+1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/main.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	"menu.h"
+
+1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/menu.h
+	"arrayOwnersAndCars.h"
+
+1543859149 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.h
+	"arrayOwners.h"
+	"arrayCars.h"
+
+1543859575 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/menu.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"validate.h"
+
+1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/validate.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"validate.h"
+
+1543863866 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"arrayOwnersAndCars.h"
+

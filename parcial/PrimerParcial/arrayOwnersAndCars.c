@@ -29,6 +29,7 @@ int addIdCar(eCar* cars, eOwner* owners, int len)
 
                 if(option=='S')
                 {
+                    owners[i].carsNumber += 1;
                     printf("Ingrese la patente: ");
                     fflush(stdin);
                     scanf("%s", cars[i].patent);
@@ -111,7 +112,7 @@ int printOwnersAndCars(eCar* cars, eOwner* owners, int len)
     int i;
     for(i=0; i<len; i++)
     {
-        if(owners[i].state==FULL && cars[i].state>EMPTY)
+        if(owners[i].state==FULL && owners[i].carsNumber!=0)
         {
             switch(cars[i].brand)
             {
@@ -127,14 +128,10 @@ int printOwnersAndCars(eCar* cars, eOwner* owners, int len)
             case OTRO:
                 strcpy(textBrand, "Otro");
                 break;
-            default:
-                strcpy(textBrand, "N/I");
-                strcpy(cars[i].patent, "N/I");
-                break;
             }
 
             printf("%d\t%s\t%s\t%s\t%s\t\t%d\n", owners[i].idOwner, owners[i].name, owners[i].lastName,
-                   cars[i].patent, textBrand, cars[i].valor);
+                   cars[i].patent, textBrand, owners[i].carsNumber);
         }
 
     }
@@ -145,11 +142,12 @@ int printOwnersAndCars(eCar* cars, eOwner* owners, int len)
 int printOnlyCars(eCar* cars, eOwner* owners, int len)
 {
     char textBrand[20];
+    int carsNumber = 0;
 
     int i;
     for(i=0; i<len; i++)
     {
-        if(cars[i].state==FULL)
+        if(owners[i].state==FULL && cars[i].state==FULL)
         {
             switch(cars[i].brand)
             {
@@ -168,8 +166,11 @@ int printOnlyCars(eCar* cars, eOwner* owners, int len)
             }
 
             printf("%s\t%s\n", cars[i].patent, textBrand);
+            carsNumber += owners[i].carsNumber;
         }
     }
+    printf("El numero de autos estacionados es: %d\n", carsNumber);
+
     return 0;
 }
 
@@ -230,11 +231,69 @@ int sortOwnersAndCars(eCar* cars, eOwner* owners, int len, int order)
     int i, j;
     for(i=0; i<len-1; i++)
     {
-        if(owners[i].state==FULL)
+        if(owners[i].state==FULL && cars[i].state==FULL)
         {
             for(j=i+1; j<len; j++)
             {
-                if(owners[j].state==FULL && strcmp(owners[i].lastName, owners[j].lastName)>0)
+                if(owners[j].state==FULL && cars[j].state==FULL && strcmp(owners[i].lastName, owners[j].lastName)>0)
+                {
+                    strcpy(tempText, owners[i].lastName);
+                    strcpy(owners[i].lastName, owners[j].lastName);
+                    strcpy(owners[j].lastName, tempText);
+
+                    strcpy(tempText, owners[i].name);
+                    strcpy(owners[i].name, owners[j].name);
+                    strcpy(owners[j].name, tempText);
+
+                    temp=owners[i].idOwner;
+                    owners[i].idOwner=owners[j].idOwner;
+                    owners[j].idOwner=temp;
+
+                    temp=owners[i].carsNumber;
+                    owners[i].carsNumber=owners[j].carsNumber;
+                    owners[j].carsNumber=temp;
+
+                    strcpy(tempText, owners[i].cardNumber);
+                    strcpy(owners[i].cardNumber, owners[j].cardNumber);
+                    strcpy(owners[j].cardNumber, tempText);
+
+                    strcpy(tempText, cars[i].patent);
+                    strcpy(cars[i].patent, cars[j].patent);
+                    strcpy(cars[j].patent, tempText);
+
+                    temp=cars[i].brand;
+                    cars[i].brand=cars[j].brand;
+                    cars[j].brand=temp;
+
+                }
+                else if(owners[j].state==FULL && strcmp(owners[i].name, owners[j].name)>0)
+                {
+                    if(owners[i].lastName>owners[j].lastName)
+                    {
+                        strcpy(tempText, owners[i].lastName);
+                        strcpy(owners[i].lastName, owners[j].lastName);
+                        strcpy(owners[j].lastName, tempText);
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+int sortCarsbyPatent(eCar* cars, eOwner* owners, int len, int order)
+{
+    char tempText[51];
+    int temp;
+
+    int i, j;
+    for(i=0; i<len-1; i++)
+    {
+        if(cars[i].state==FULL)
+        {
+            for(j=i+1; j<len; j++)
+            {
+                if(cars[j].state==FULL && strcmp(cars[i].patent, cars[j].patent)>0)
                 {
                     strcpy(tempText, owners[i].lastName);
                     strcpy(owners[i].lastName, owners[j].lastName);
@@ -260,15 +319,6 @@ int sortOwnersAndCars(eCar* cars, eOwner* owners, int len, int order)
                     cars[i].brand=cars[j].brand;
                     cars[j].brand=temp;
 
-                }
-                else if(owners[j].state==FULL && strcmp(owners[i].name, owners[j].name)>0)
-                {
-                    if(owners[i].lastName>owners[j].lastName)
-                    {
-                        strcpy(tempText, owners[i].lastName);
-                        strcpy(owners[i].lastName, owners[j].lastName);
-                        strcpy(owners[j].lastName, tempText);
-                    }
                 }
             }
         }
@@ -308,7 +358,7 @@ int printmeById(eCar* cars, eOwner* owners, int len)
                         break;
                     }
                 }
-                printf("%s\n%s\n%s\n", owners[i].name, cars[i].patent, textBrand);
+                printf("%s\t%s\t%s\n", owners[i].name, cars[i].patent, textBrand);
                 break;
             }
 

@@ -127,8 +127,8 @@ void showMenu(eOwner* owners, int length)
         case 9:
             if(flag==1)
             {
-                collectionForBrand(cars, owners, length);
                 printf("Recaudacion por marca\n");
+                collectionForBrand(cars, owners, length);
             }
             else
             {
@@ -138,8 +138,8 @@ void showMenu(eOwner* owners, int length)
         case 10:
             if(flag==1)
             {
-                printmeById(cars, owners, length);
                 printf("Propietarios y patentes segun ID\n");
+                printmeById(cars, owners, length);
             }
             else
             {
@@ -149,8 +149,8 @@ void showMenu(eOwner* owners, int length)
         case 11:
             if(flag==1)
             {
-                onlyAudiCars(cars, owners, length);
                 printf("Propietarios de autos marca AUDI\n");
+                onlyAudiCars(cars, owners, length);
             }
             else
             {
@@ -161,6 +161,8 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printf("Autos y propietarios (ordenados por patente)\n");
+                sortCarsbyPatent(cars, owners, length, 1);
+                printOwnersAndCars(cars, owners, length);
             }
             else
             {
@@ -176,7 +178,8 @@ void showMenu(eOwner* owners, int length)
         //system("pause");
         //system("cls");
         printf("Presione una tecla para continuar...\n");
-        scanf("%d", &option);
+        __fpurge(stdin);
+        getchar();
         system("clear");
     }
     while(option!=0);

@@ -35,6 +35,7 @@ int initOwnersHardCode(eOwner* owners, int len)
         strcpy(owners[i].lastName, lastName[i]);
         strcpy(owners[i].address, address[i]);
         strcpy(owners[i].cardNumber, cardNumber[i]);
+        owners[i].carsNumber=1;
         owners[i].state=FULL;
     }
     return 0;
@@ -79,6 +80,7 @@ int addOwner(eOwner* owners, int len)
                 printf("Error: el numero de tarjeta ingresado no es valido\n");
                 break;
             }
+            owners[i].carsNumber = 0;
             owners[i].state = FULL;
             break;
         }
