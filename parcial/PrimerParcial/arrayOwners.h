@@ -8,7 +8,7 @@ typedef struct
     char name[30];
     char lastName[30];
     char address[30];
-    char cardNumber[30];
+    char creditCard[30];
     int carsNumber;
     int state;
 }eOwner;

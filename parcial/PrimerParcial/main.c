@@ -8,7 +8,7 @@
 int main()
 {
     eOwner ownersList[LIST];
-    eCar carsList[LIST];
+    eCar carsList[LIST][LIST];
 
     initOwners(ownersList, LIST);
 

@@ -21,4 +21,6 @@ int printmeById(eCar*, eOwner*, int);
 
 int onlyAudiCars(eCar*, eOwner*, int);
 
+int listCarsEveryone(eCar*, eOwner*, int);
+
 int devolverHorasEstadia();

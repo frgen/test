@@ -139,6 +139,7 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printf("Propietarios y patentes segun ID\n");
+                printOwners(owners, length);
                 printmeById(cars, owners, length);
             }
             else

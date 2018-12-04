@@ -19,12 +19,12 @@ int initOwners(eOwner* owners, int len)
 
 int initOwnersHardCode(eOwner* owners, int len)
 {
-    int id[5]= {100,101,102,103,104};
+    int id[5]= {110,105,134,171,122};
     char name[5][51]= {"Walter","Maria","Andres","Belen","Jose"};
     char lastName[5][51]= {"Ramirez","Perez","Gomez","Soto","Oliva"};
     char address[5][51]= {"aaa","bbb","ccc","ddd","eee"};
-    char cardNumber[5][51]= {"1000111122223333","1000111122223345","1000111122223369",
-                             "1000111122223333","1000111122223345"
+    char creditCard[5][51]= {"1000111122223333","1000111120003345","1000111122223369",
+                             "1099333322223333","1055996622223388"
                             };
 
     int i;
@@ -34,7 +34,7 @@ int initOwnersHardCode(eOwner* owners, int len)
         strcpy(owners[i].name, name[i]);
         strcpy(owners[i].lastName, lastName[i]);
         strcpy(owners[i].address, address[i]);
-        strcpy(owners[i].cardNumber, cardNumber[i]);
+        strcpy(owners[i].creditCard, creditCard[i]);
         owners[i].carsNumber=1;
         owners[i].state=FULL;
     }
@@ -74,7 +74,7 @@ int addOwner(eOwner* owners, int len)
             __fpurge(stdin);
             scanf("%s", owners[i].address);
             printf("Ingrese el numero de tarjeta de credito: ");
-            j = getNumber(owners[i].cardNumber);
+            j = getNumber(owners[i].creditCard);
             if(j==0)
             {
                 printf("Error: el numero de tarjeta ingresado no es valido\n");
@@ -167,13 +167,13 @@ int editOwner(eOwner* owners, int len)
 
             if(option=='S')
             {
-                strcpy(temp, owners[i].cardNumber);
+                strcpy(temp, owners[i].creditCard);
                 printf("Ingrese nuevo numero de tarjeta: ");
-                j = getNumber(owners[i].cardNumber);
+                j = getNumber(owners[i].creditCard);
                 if(j==0)
                 {
                     printf("Error: el numero de tarjeta ingresado no es valido\n");
-                    strcpy(owners[i].cardNumber, temp);
+                    strcpy(owners[i].creditCard, temp);
                     break;
                 }
                 else
@@ -195,7 +195,7 @@ int printOwners(eOwner* owners, int len)
     {
         if(owners[i].state==FULL)
         {
-            printf("%d\t%s\t%s\t%s\n", owners[i].idOwner, owners[i].name, owners[i].lastName, owners[i].cardNumber);
+            printf("%d\t%s\t%s\t%s\n", owners[i].idOwner, owners[i].name, owners[i].lastName, owners[i].creditCard);
         }
     }
     return 0;
