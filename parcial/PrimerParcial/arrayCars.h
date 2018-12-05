@@ -10,17 +10,24 @@
 
 typedef struct
 {
-    char patent[20];
-    int brand;
-    int valor;
     int idForOwner;
+    char patent[20];
     int state;
 } eCar;
 
-int initCarsHardCode(eCar*, int);
+typedef struct
+{
+    int idMarca;
+    int descripcion;
+    int precioPorHora;
+    int state;
+}eMarca;
 
-int initCars(eCar*, int);
 
-int addCar(eCar*, int);
+int initCarsHardCode(eMarca*, eCar*, int);
+
+int initCars(eMarca*, eCar*, int);
+
+int addCar(eMarca*, eCar*, int);
 
 int dataCars(int);

@@ -1,26 +1,26 @@
 #include "arrayOwners.h"
 #include "arrayCars.h"
 
-int addIdCar(eCar*, eOwner*, int);
+int addIdCar(eMarca*, eCar*, eOwner*, int);
 
-int getOutCar(eCar* cars, eOwner* owners, int len);
+int getOutCar(eMarca*, eCar* cars, eOwner* owners, int len);
 
-int printOwnersAndCars(eCar*, eOwner*, int);
+int printOwnersAndCars(eMarca*, eCar*, eOwner*, int);
 
-int printOnlyCars(eCar*, eOwner*, int);
+int printOnlyCars(eMarca*, eCar*, eOwner*, int);
 
-int totalCollection(eCar*, eOwner*, int);
+int totalCollection(eMarca*, eCar*, eOwner*, int);
 
-int collectionForBrand(eCar*, eOwner*, int);
+int collectionForBrand(eMarca*, eCar*, eOwner*, int);
 
-int sortOwnersAndCars(eCar*, eOwner*, int, int);
+int sortOwnersAndCars(eMarca*, eCar*, eOwner*, int, int);
 
-int sortCarsbyPatent(eCar*, eOwner*, int, int);
+int sortCarsbyPatent(eMarca*, eCar*, eOwner*, int, int);
 
-int printmeById(eCar*, eOwner*, int);
+int printmeById(eMarca*, eCar*, eOwner*, int);
 
-int onlyAudiCars(eCar*, eOwner*, int);
+int onlyAudiCars(eMarca*, eCar*, eOwner*, int);
 
-int listCarsEveryone(eCar*, eOwner*, int);
+int listCarsEveryone(eMarca*, eCar*, eOwner*, int);
 
 int devolverHorasEstadia();

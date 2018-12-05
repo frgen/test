@@ -135,15 +135,15 @@
 	<string.h>
 	"arrayCars.h"
 
-1539348696 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\arraycars.c
+1544012653 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\arraycars.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arrayCars.h"
 
-1539350011 c:\users\alumno\desktop\test-master\parcial\primerparcial\arraycars.h
+1544015740 c:\users\alumno\desktop\test-master\parcial\primerparcial\arraycars.h
 
-1539351279 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayowners.c
+1543982591 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayowners.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -151,11 +151,11 @@
 	"arrayOwners.h"
 	"validate.h"
 
-1539345668 c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayowners.h
+1543982591 c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayowners.h
 
-1539323039 c:\users\alumno\desktop\test-master\parcial\primerparcial\validate.h
+1543982591 c:\users\alumno\desktop\test-master\parcial\primerparcial\validate.h
 
-1539350939 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayownersandcars.c
+1544016176 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayownersandcars.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -163,24 +163,26 @@
 	<time.h>
 	"arrayOwnersAndCars.h"
 
-1539352019 c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayownersandcars.h
+1544012563 c:\users\alumno\desktop\test-master\parcial\primerparcial\arrayownersandcars.h
 	"arrayOwners.h"
 	"arrayCars.h"
 
-1539323039 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\main.c
+1544012699 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 
-1539323039 c:\users\alumno\desktop\test-master\parcial\primerparcial\menu.h
+1544012563 c:\users\alumno\desktop\test-master\parcial\primerparcial\menu.h
 	"arrayOwnersAndCars.h"
 
-1539350715 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\menu.c
+1544015752 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\menu.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"menu.h"
+	"validate.h"
 
-1539323039 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\validate.c
+1543982591 source:c:\users\alumno\desktop\test-master\parcial\primerparcial\validate.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

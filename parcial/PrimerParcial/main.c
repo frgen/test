@@ -9,12 +9,13 @@ int main()
 {
     eOwner ownersList[LIST];
     eCar carsList[LIST];
+    eMarca brandList[LIST];
 
     initOwners(ownersList, LIST);
 
-    initCars(carsList, LIST);
+    initCars(brandList, carsList, LIST);
 
-    showMenu(ownersList, LIST);
+    showMenu(brandList, ownersList, LIST);
 
     return 0;
 }

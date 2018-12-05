@@ -7,15 +7,17 @@
 
 
 
-void showMenu(eOwner* owners, int length)
+void showMenu(eMarca* brand, eOwner* owners, int length)
 {
     eCar cars[length];
+    //eCar auxCars[length];
+    //eMarca auxBrand[length];
     char aux[10];
     int flag=0;
     int option;
 
     initOwnersHardCode(owners, length);
-    initCarsHardCode(cars, length);
+    initCarsHardCode(brand, cars, length);
 
     do
     {
@@ -73,7 +75,7 @@ void showMenu(eOwner* owners, int length)
         case 4:
             if(flag==1)
             {
-                sortOwnersAndCars(cars, owners, length, 1);
+                sortOwnersAndCars(brand, cars, owners, length, 1);
                 printOwners(owners, length);
             }
             else
@@ -85,7 +87,7 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printOwners(owners, length);
-                addIdCar(cars, owners, length);
+                addIdCar(brand, cars, owners, length);
             }
             else
             {
@@ -95,8 +97,8 @@ void showMenu(eOwner* owners, int length)
         case 6:
             if(flag==1)
             {
-                printOwnersAndCars(cars, owners, length);
-                getOutCar(cars, owners, length);
+                printOwnersAndCars(brand, cars, owners, length);
+                getOutCar(brand, cars, owners, length);
             }
             else
             {
@@ -106,7 +108,7 @@ void showMenu(eOwner* owners, int length)
         case 7:
             if(flag==1)
             {
-                printOnlyCars(cars, owners, length);
+                printOnlyCars(brand, cars, owners, length);
             }
             else
             {
@@ -117,7 +119,7 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printf("Recaudacion total\n");
-                totalCollection(cars, owners, length);
+                totalCollection(brand, cars, owners, length);
             }
             else
             {
@@ -128,7 +130,7 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printf("Recaudacion por marca\n");
-                collectionForBrand(cars, owners, length);
+                collectionForBrand(brand, cars, owners, length);
             }
             else
             {
@@ -139,8 +141,8 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printf("Propietarios y patentes segun ID\n");
-                printOwnersAndCars(cars, owners, length);
-                printmeById(cars, owners, length);
+                printOwnersAndCars(brand, cars, owners, length);
+                printmeById(brand, cars, owners, length);
             }
             else
             {
@@ -151,7 +153,7 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printf("Propietarios de autos marca AUDI\n");
-                onlyAudiCars(cars, owners, length);
+                onlyAudiCars(brand, cars, owners, length);
             }
             else
             {
@@ -162,8 +164,8 @@ void showMenu(eOwner* owners, int length)
             if(flag==1)
             {
                 printf("Autos y propietarios (ordenados por patente)\n");
-                sortCarsbyPatent(cars, owners, length, 1);
-                printOwnersAndCars(cars, owners, length);
+                sortCarsbyPatent(brand, cars, owners, length, 1);
+                printOwnersAndCars(brand, cars, owners, length);
             }
             else
             {

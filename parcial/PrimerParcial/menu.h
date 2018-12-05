@@ -1,3 +1,3 @@
 #include "arrayOwnersAndCars.h"
 
-void showMenu(eOwner*, int);
+void showMenu(eMarca*, eOwner*, int);

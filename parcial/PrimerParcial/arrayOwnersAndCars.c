@@ -6,10 +6,11 @@
 #include <time.h>
 #include "arrayOwnersAndCars.h"
 
-int addIdCar(eCar* cars, eOwner* owners, int len)
+int addIdCar(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
     int id;
     int i;
+    //int j;
     char option;
 
     id = findOwnerById(owners,len,owners[len].idOwner);
@@ -18,8 +19,8 @@ int addIdCar(eCar* cars, eOwner* owners, int len)
     {
         for(i=0; i<len; i++)
         {
-            cars[i].idForOwner = id;
-            if(cars[i].idForOwner==owners[i].idOwner)
+            brand[i].idMarca = id;
+            if(brand[i].idMarca==owners[i].idOwner)
             {
                 printf("Desea agregar un auto nuevo a este propietario(s/n)?\n");
                 fflush(stdin);
@@ -36,35 +37,47 @@ int addIdCar(eCar* cars, eOwner* owners, int len)
                     scanf("%s", cars[i].patent);
 
                     printf("Ingrese la marca (1.Alpha Romeo 2. Ferrari 3. Audi 4. Otro): ");
-                    scanf("%d", &cars[i].brand);
+                    scanf("%d", &brand[i].descripcion);
 
-                    //listCarsEveryone(cars, owners, len);
-
-                    switch(cars[i].brand)
+                    switch(brand[i].descripcion)
                     {
                     case ALPHA_ROMEO:
-                        cars[i].valor=150;
+                        brand[i].precioPorHora=150;
                         cars[i].state=FULL;
                         printf("Agregado con exito\n");
                         continue;
                     case FERRARI:
-                        cars[i].valor=175;
+                        brand[i].precioPorHora=175;
                         cars[i].state=FULL;
                         printf("Agregado con exito\n");
                         continue;
                     case AUDI:
-                        cars[i].valor=200;
+                        brand[i].precioPorHora=200;
                         cars[i].state=FULL;
                         printf("Agregado con exito\n");
                         continue;
                     case OTRO:
-                        cars[i].valor=250;
+                        brand[i].precioPorHora=250;
                         cars[i].state=FULL;
                         printf("Agregado con exito\n");
                         continue;
+
+
+                    /*for(j=0; j<len; j++)
+                    {
+                        if(auxCars[j].state==EMPTY && auxBrand[j].state==EMPTY)
+                        {
+                        auxCars[j].state=FULL;
+                        auxCars[j].idForOwner = id;
+                        auxCars[j].patent = cars[i].patent;
+                        auxBrand[j].state=FULL;
+                        auxBrand[j].idMarca = id;
+                        auxBrand[j].precioPorHora= brand[i].precioPorHora;
+                        auxBrand[j].descripcion=brand[i].descripcion;
+                        }
+                    }*/
+
                     }
-
-
                 }
                 break;
             }
@@ -74,37 +87,8 @@ int addIdCar(eCar* cars, eOwner* owners, int len)
     return 0;
 }
 
-int listCarsEveryone(eCar* cars, eOwner* owners, int len)
-{
-    int i, j;
-    eCar auxList[20];
-    initCars(auxList, 20);
 
-    for(i=0; i<len; i++)
-    {
-        if(owners[i].state==FULL && cars[i].state==FULL)
-        {
-            for(j=0; j<=owners[i].carsNumber; j++)
-            {
-                if(auxList[j].state==EMPTY)
-                {
-                    auxList[j].state=FULL;
-                    strcpy(auxList[j].patent, cars[i].patent);
-                    auxList[j].brand=cars[i].brand;
-                    auxList[j].valor=cars[i].valor;
-                    auxList[j].idForOwner=cars[i].idForOwner;
-                    break;
-                }
-                printf("%d\t%s\t%d\n", auxList[j].idForOwner, auxList[j].patent, auxList[j].brand);
-            }
-
-        }
-    }
-
-    return 0;
-}
-
-int getOutCar(eCar* cars, eOwner* owners, int len)
+int getOutCar(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
     int hours;
     int id;
@@ -118,8 +102,8 @@ int getOutCar(eCar* cars, eOwner* owners, int len)
     {
         for(i=0; i<len; i++)
         {
-            cars[i].idForOwner = id;
-            if(cars[i].idForOwner==owners[i].idOwner)
+            brand[i].idMarca = id;
+            if(brand[i].idMarca==owners[i].idOwner)
             {
                 printf("Desea egresar el auto del propietario(s/n)?\n");
                 fflush(stdin);
@@ -129,7 +113,7 @@ int getOutCar(eCar* cars, eOwner* owners, int len)
 
                 if(option=='S')
                 {
-                    cars[i].valor=cars[i].valor*hours;
+                    brand[i].precioPorHora=brand[i].precioPorHora*hours;
                     cars[i].state = FIRED;
                     printf("Egresado con exito\n");
                 }
@@ -142,15 +126,15 @@ int getOutCar(eCar* cars, eOwner* owners, int len)
     return 0;
 }
 
-int printOwnersAndCars(eCar* cars, eOwner* owners, int len)
+int printOwnersAndCars(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
-    char textBrand[20];
+    char textBrand[30];
     int i;
     for(i=0; i<len; i++)
     {
         if(owners[i].state==FULL && owners[i].carsNumber!=0 && cars[i].state==FULL)
         {
-            switch(cars[i].brand)
+            switch(brand[i].descripcion)
             {
             case ALPHA_ROMEO:
                 strcpy(textBrand, "AlphaRomeo");
@@ -166,8 +150,8 @@ int printOwnersAndCars(eCar* cars, eOwner* owners, int len)
                 break;
             }
 
-            printf("%d\t%s\t%s\t%s\t%s\t\t%d\n", owners[i].idOwner, owners[i].name, owners[i].lastName,
-                   cars[i].patent, textBrand, owners[i].carsNumber);
+            printf("%d\t%s\t%s\t%s\t%s\n", owners[i].idOwner, owners[i].name, owners[i].lastName,
+                   cars[i].patent, textBrand);
         }
 
     }
@@ -175,9 +159,9 @@ int printOwnersAndCars(eCar* cars, eOwner* owners, int len)
     return 0;
 }
 
-int printOnlyCars(eCar* cars, eOwner* owners, int len)
+int printOnlyCars(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
-    char textBrand[20];
+    char textBrand[30];
     int carsNumber = 0;
 
     int i;
@@ -185,7 +169,7 @@ int printOnlyCars(eCar* cars, eOwner* owners, int len)
     {
         if(owners[i].state==FULL && cars[i].state==FULL)
         {
-            switch(cars[i].brand)
+            switch(brand[i].descripcion)
             {
             case 1:
                 strcpy(textBrand, "AlphaRomeo");
@@ -210,14 +194,14 @@ int printOnlyCars(eCar* cars, eOwner* owners, int len)
     return 0;
 }
 
-int totalCollection(eCar* cars, eOwner* owners, int len)
+int totalCollection(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
     int i, sum=0;
     for(i=0; i<len; i++)
     {
         if(cars[i].state==FIRED)
         {
-            sum +=cars[i].valor;
+            sum +=brand[i].precioPorHora;
         }
     }
 
@@ -226,7 +210,7 @@ int totalCollection(eCar* cars, eOwner* owners, int len)
     return 0;
 }
 
-int collectionForBrand(eCar* cars, eOwner* owners, int len)
+int collectionForBrand(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
 
     int hours;
@@ -236,30 +220,30 @@ int collectionForBrand(eCar* cars, eOwner* owners, int len)
     {
         if(cars[i].state==FIRED)
         {
-            switch(cars[i].brand)
+            switch(brand[i].descripcion)
             {
             case 1:
-                cars[i].valor = hours*150;
+                brand[i].precioPorHora = hours*150;
                 break;
             case 2:
-                cars[i].valor = hours*175;
+                brand[i].precioPorHora = hours*175;
                 break;
             case 3:
-                cars[i].valor = hours*200;
+                brand[i].precioPorHora = hours*200;
                 break;
             case 4:
-                cars[i].valor=250;
+                brand[i].precioPorHora=250;
                 break;
             }
-            cars[i].valor=cars[i].valor*hours;
+            brand[i].precioPorHora=brand[i].precioPorHora*hours;
             printf("%d\t%s\t%s\t%s\t%d\n", owners[i].idOwner, owners[i].name, owners[i].lastName,
-                   cars[i].patent, cars[i].valor);
+                   cars[i].patent, brand[i].precioPorHora);
         }
     }
     return 0;
 }
 
-int sortOwnersAndCars(eCar* cars, eOwner* owners, int len, int order)
+int sortOwnersAndCars(eMarca* brand, eCar* cars, eOwner* owners, int len, int order)
 {
     char tempText[51];
     int temp;
@@ -297,9 +281,9 @@ int sortOwnersAndCars(eCar* cars, eOwner* owners, int len, int order)
                     strcpy(cars[i].patent, cars[j].patent);
                     strcpy(cars[j].patent, tempText);
 
-                    temp=cars[i].brand;
-                    cars[i].brand=cars[j].brand;
-                    cars[j].brand=temp;
+                    temp=brand[i].descripcion;
+                    brand[i].descripcion=brand[j].descripcion;
+                    brand[j].descripcion=temp;
 
                 }
                 else if(owners[j].state==FULL && strcmp(owners[i].name, owners[j].name)>0)
@@ -317,7 +301,7 @@ int sortOwnersAndCars(eCar* cars, eOwner* owners, int len, int order)
     return 0;
 }
 
-int sortCarsbyPatent(eCar* cars, eOwner* owners, int len, int order)
+int sortCarsbyPatent(eMarca* brand, eCar* cars, eOwner* owners, int len, int order)
 {
     char tempText[51];
     int temp;
@@ -351,9 +335,9 @@ int sortCarsbyPatent(eCar* cars, eOwner* owners, int len, int order)
                     strcpy(cars[i].patent, cars[j].patent);
                     strcpy(cars[j].patent, tempText);
 
-                    temp=cars[i].brand;
-                    cars[i].brand=cars[j].brand;
-                    cars[j].brand=temp;
+                    temp=brand[i].descripcion;
+                    brand[i].descripcion=brand[j].descripcion;
+                    brand[j].descripcion=temp;
 
                 }
             }
@@ -362,11 +346,11 @@ int sortCarsbyPatent(eCar* cars, eOwner* owners, int len, int order)
     return 0;
 }
 
-int printmeById(eCar* cars, eOwner* owners, int len)
+int printmeById(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
     int id;
     int i;
-    char textBrand[20];
+    char textBrand[30];
 
     id = findOwnerById(owners,len,owners[len].idOwner);
 
@@ -376,9 +360,9 @@ int printmeById(eCar* cars, eOwner* owners, int len)
         {
             if(id==owners[i].idOwner)
             {
-                if(cars[i].brand>0 &&cars[i].brand<=4)
+                if(brand[i].descripcion>0 &&brand[i].descripcion<=4)
                 {
-                    switch(cars[i].brand)
+                    switch(brand[i].descripcion)
                     {
                     case ALPHA_ROMEO:
                         strcpy(textBrand, "Alpha Romeo");
@@ -405,7 +389,7 @@ int printmeById(eCar* cars, eOwner* owners, int len)
     return 0;
 }
 
-int onlyAudiCars(eCar* cars, eOwner* owners, int len)
+int onlyAudiCars(eMarca* brand, eCar* cars, eOwner* owners, int len)
 {
     int i;
 
@@ -413,7 +397,7 @@ int onlyAudiCars(eCar* cars, eOwner* owners, int len)
     {
         if(owners[i].state==FULL && cars[i].state==FULL)
         {
-            if(cars[i].brand==3)
+            if(brand[i].descripcion==3)
             {
                 printf("%d\t%s\t%s\t%s\n", owners[i].idOwner, owners[i].name, owners[i].lastName,
                        owners[i].creditCard);

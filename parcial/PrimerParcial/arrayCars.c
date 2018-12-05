@@ -4,39 +4,39 @@
 #include <string.h>
 #include "arrayCars.h"
 
-int initCarsHardCode(eCar* cars, int len)
+int initCarsHardCode(eMarca* brand, eCar* cars, int len)
 {
     int idCar[5]= {100,101,102,103,104};
     char patent[5][20]= {"WBM123","MNB543","AAQ143","BZA987","JHG123"};
-    int brand[5]= {1,3,2,4,3};
+    int someBrand[5]= {1,3,2,4,3};
     int valor[5]= {150,250,175,150,200};
 
     int i;
     for(i=0; i<5; i++)
     {
-        cars[i].idForOwner=idCar[i];
+        brand[i].idMarca=idCar[i];
         strcpy(cars[i].patent, patent[i]);
-        cars[i].brand=brand[i];
-        cars[i].valor=valor[i];
+        brand[i].descripcion=someBrand[i];
+        brand[i].precioPorHora=valor[i];
         cars[i].state=FULL;
     }
     return 0;
 }
 
-int initCars(eCar* cars, int len)
+int initCars(eMarca* brand, eCar* cars, int len)
 {
     int i;
 
     for(i=0; i<len; i++)
     {
-        cars[i].brand = 0;
-        cars[i].valor = 0;
+        brand[i].descripcion = 0;
+        brand[i].precioPorHora = 0;
         cars[i].state = EMPTY;
     }
     return 0;
 }
 
-int addCar(eCar* cars, int len)
+int addCar(eMarca* brand, eCar* cars, int len)
 {
     int i;
     for(i=0; i<len; i++)
@@ -46,7 +46,7 @@ int addCar(eCar* cars, int len)
             printf("Ingrese la marca: ");
             fflush(stdin);
             //__fpurge(stdin);
-            scanf("%d", &cars[i].brand);
+            scanf("%d", &brand[i].descripcion);
             printf("Ingrese la patente: ");
             fflush(stdin);
             //__fpurge(stdin);
