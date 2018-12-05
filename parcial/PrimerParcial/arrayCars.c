@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include "arrayCars.h"
@@ -44,12 +44,12 @@ int addCar(eCar* cars, int len)
         if(cars[i].state != FULL)
         {
             printf("Ingrese la marca: ");
-            //fflush(stdin);
-            __fpurge(stdin);
+            fflush(stdin);
+            //__fpurge(stdin);
             scanf("%d", &cars[i].brand);
             printf("Ingrese la patente: ");
-            //fflush(stdin);
-            __fpurge(stdin);
+            fflush(stdin);
+            //__fpurge(stdin);
             scanf("%s", cars[i].patent);
 
             cars[i].state = FULL;

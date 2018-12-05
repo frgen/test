@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -9,7 +9,7 @@
 int addIdCar(eCar* cars, eOwner* owners, int len)
 {
     int id;
-    int i, j;
+    int i;
     char option;
 
     id = findOwnerById(owners,len,owners[len].idOwner);
@@ -22,8 +22,8 @@ int addIdCar(eCar* cars, eOwner* owners, int len)
             if(cars[i].idForOwner==owners[i].idOwner)
             {
                 printf("Desea agregar un auto nuevo a este propietario(s/n)?\n");
-                //fflush(stdin);
-                __fpurge(stdin);
+                fflush(stdin);
+                //__fpurge(stdin);
                 scanf("%c", &option);
                 option = toupper(option);
 
@@ -31,14 +31,14 @@ int addIdCar(eCar* cars, eOwner* owners, int len)
                 {
                     owners[i].carsNumber += 1;
                     printf("Ingrese la patente: ");
-                    //fflush(stdin);
-                    __fpurge(stdin);
+                    fflush(stdin);
+                    //__fpurge(stdin);
                     scanf("%s", cars[i].patent);
 
                     printf("Ingrese la marca (1.Alpha Romeo 2. Ferrari 3. Audi 4. Otro): ");
                     scanf("%d", &cars[i].brand);
 
-                    listCarsEveryone(cars, owners, len);
+                    //listCarsEveryone(cars, owners, len);
 
                     switch(cars[i].brand)
                     {
@@ -122,8 +122,8 @@ int getOutCar(eCar* cars, eOwner* owners, int len)
             if(cars[i].idForOwner==owners[i].idOwner)
             {
                 printf("Desea egresar el auto del propietario(s/n)?\n");
-                //fflush(stdin);
-                __fpurge(stdin);
+                fflush(stdin);
+                //__fpurge(stdin);
                 scanf("%c", &option);
                 option = toupper(option);
 

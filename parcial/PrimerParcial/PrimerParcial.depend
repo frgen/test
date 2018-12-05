@@ -27,19 +27,19 @@
 
 1539266992 source:c:\users\alumno\desktop\primerparcial\validate.c
 
-1543514587 source:e:\parcial\primerparcial\main.c
+1543981888 source:e:\parcial\primerparcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 
-1541128817 e:\parcial\primerparcial\menu.h
+1543726435 e:\parcial\primerparcial\menu.h
 	"arrayOwnersAndCars.h"
 
 1541128817 rsAndCars.h"
 
-1543505175 e:\parcial\primerparcial\arrayowners.h
+1543955758 e:\parcial\primerparcial\arrayowners.h
 
-1543524007 source:e:\parcial\primerparcial\menu.c
+1543982124 source:e:\parcial\primerparcial\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -48,13 +48,13 @@
 
 1541128817 h"
 
-1541128817 source:e:\parcial\primerparcial\validate.c
+1543981888 source:e:\parcial\primerparcial\validate.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"validate.h"
 
-1543513029 source:e:\parcial\primerparcial\arrayowners.c
+1543981888 source:e:\parcial\primerparcial\arrayowners.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -62,7 +62,7 @@
 	"arrayOwners.h"
 	"validate.h"
 
-1541128817 e:\parcial\primerparcial\validate.h
+1543726435 e:\parcial\primerparcial\validate.h
 
 1539312345 source:/home/nati/Descargas/parcial/PrimerParcial/main.c
 	<stdio.h>
@@ -115,7 +115,7 @@
 	"arrayOwners.h"
 	"arrayCars.h"
 
-1543524505 source:e:\parcial\primerparcial\arrayownersandcars.c
+1543981903 source:e:\parcial\primerparcial\arrayownersandcars.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -123,13 +123,13 @@
 	<time.h>
 	"arrayOwnersAndCars.h"
 
-1543535760 e:\parcial\primerparcial\arrayownersandcars.h
+1543960317 e:\parcial\primerparcial\arrayownersandcars.h
 	"arrayOwners.h"
 	"arrayCars.h"
 
-1541128817 e:\parcial\primerparcial\arraycars.h
+1543726435 e:\parcial\primerparcial\arraycars.h
 
-1543524248 source:e:\parcial\primerparcial\arraycars.c
+1543981888 source:e:\parcial\primerparcial\arraycars.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -186,53 +186,90 @@
 	<string.h>
 	"validate.h"
 
-1541128817 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.c
+1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arrayCars.h"
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"arrayCars.h"
 
-1541128817 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.h
+1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.h
 
-1541128817 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.c
+1543955758 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"arrayOwners.h"
 	"validate.h"
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayOwners.h"
+	"validate.h"
 
-1541128817 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.h
+1543955758 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.h
 
-1541128817 /home/fede/Descargas/test-master/parcial/PrimerParcial/validate.h
+1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/validate.h
 
-1541128817 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.c
+1543945743 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	<time.h>
 	"arrayOwnersAndCars.h"
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"arrayOwnersAndCars.h"
 
-1541128817 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.h
+1543960317 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.h
+	"arrayOwners.h"
+	"arrayCars.h"
 	"arrayOwners.h"
 	"arrayCars.h"
 
-1541128817 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/main.c
+1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	"menu.h"
 
-1541128817 /home/fede/Descargas/test-master/parcial/PrimerParcial/menu.h
+1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/menu.h
+	"arrayOwnersAndCars.h"
 	"arrayOwnersAndCars.h"
 
-1541128817 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/menu.c
+1543943952 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
-
-1541128817 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/validate.c
 	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"validate.h"
+
+1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/validate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validate.h"
+	<stdio.h>
+	<stdio_ext.h>
 	<stdlib.h>
 	<string.h>
 	"validate.h"
@@ -295,63 +332,4 @@
 	<stdlib.h>
 	<string.h>
 	"validate.h"
-
-1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.c
-	<stdio.h>
-	<stdio_ext.h>
-	<stdlib.h>
-	<string.h>
-	"arrayCars.h"
-
-1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayCars.h
-
-1543955758 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.c
-	<stdio.h>
-	<stdio_ext.h>
-	<stdlib.h>
-	<ctype.h>
-	<string.h>
-	"arrayOwners.h"
-	"validate.h"
-
-1543955758 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwners.h
-
-1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/validate.h
-
-1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/main.c
-	<stdio.h>
-	<stdio_ext.h>
-	<stdlib.h>
-	"menu.h"
-
-1543726435 /home/fede/Descargas/test-master/parcial/PrimerParcial/menu.h
-	"arrayOwnersAndCars.h"
-
-1543960317 /home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.h
-	"arrayOwners.h"
-	"arrayCars.h"
-
-1543943952 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/menu.c
-	<stdio.h>
-	<stdio_ext.h>
-	<stdlib.h>
-	<string.h>
-	"menu.h"
-	"validate.h"
-
-1543726435 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/validate.c
-	<stdio.h>
-	<stdio_ext.h>
-	<stdlib.h>
-	<string.h>
-	"validate.h"
-
-1543945743 source:/home/fede/Descargas/test-master/parcial/PrimerParcial/arrayOwnersAndCars.c
-	<stdio.h>
-	<stdio_ext.h>
-	<stdlib.h>
-	<string.h>
-	<ctype.h>
-	<time.h>
-	"arrayOwnersAndCars.h"
 

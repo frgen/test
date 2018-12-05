@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <stdlib.h>
 #include "menu.h"
 
@@ -8,7 +8,7 @@
 int main()
 {
     eOwner ownersList[LIST];
-    eCar carsList[LIST][LIST];
+    eCar carsList[LIST];
 
     initOwners(ownersList, LIST);
 
